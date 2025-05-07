@@ -1,0 +1,115 @@
+
+> Task :dependencies
+
+------------------------------------------------------------
+Root project 'Prueba-Tecnica'
+------------------------------------------------------------
+
+runtimeClasspath - Runtime classpath of source set 'main'.
++--- org.springframework.boot:spring-boot-starter-web -> 3.4.5
+|    +--- org.springframework.boot:spring-boot-starter:3.4.5
+|    |    +--- org.springframework.boot:spring-boot:3.4.5
+|    |    |    +--- org.springframework:spring-core:6.2.6
+|    |    |    |    \--- org.springframework:spring-jcl:6.2.6
+|    |    |    \--- org.springframework:spring-context:6.2.6
+|    |    |         +--- org.springframework:spring-aop:6.2.6
+|    |    |         |    +--- org.springframework:spring-beans:6.2.6
+|    |    |         |    |    \--- org.springframework:spring-core:6.2.6 (*)
+|    |    |         |    \--- org.springframework:spring-core:6.2.6 (*)
+|    |    |         +--- org.springframework:spring-beans:6.2.6 (*)
+|    |    |         +--- org.springframework:spring-core:6.2.6 (*)
+|    |    |         +--- org.springframework:spring-expression:6.2.6
+|    |    |         |    \--- org.springframework:spring-core:6.2.6 (*)
+|    |    |         \--- io.micrometer:micrometer-observation:1.14.5 -> 1.14.6
+|    |    |              \--- io.micrometer:micrometer-commons:1.14.6
+|    |    +--- org.springframework.boot:spring-boot-autoconfigure:3.4.5
+|    |    |    \--- org.springframework.boot:spring-boot:3.4.5 (*)
+|    |    +--- org.springframework.boot:spring-boot-starter-logging:3.4.5
+|    |    |    +--- org.apache.logging.log4j:log4j-to-slf4j:2.24.3
+|    |    |    |    +--- org.apache.logging.log4j:log4j-api:2.24.3
+|    |    |    |    \--- org.slf4j:slf4j-api:2.0.16 -> 2.0.17
+|    |    |    \--- org.slf4j:jul-to-slf4j:2.0.17
+|    |    |         \--- org.slf4j:slf4j-api:2.0.17
+|    |    +--- jakarta.annotation:jakarta.annotation-api:2.1.1
+|    |    +--- org.springframework:spring-core:6.2.6 (*)
+|    |    \--- org.yaml:snakeyaml:2.3
+|    +--- org.springframework.boot:spring-boot-starter-json:3.4.5
+|    |    +--- org.springframework.boot:spring-boot-starter:3.4.5 (*)
+|    |    +--- org.springframework:spring-web:6.2.6
+|    |    |    +--- org.springframework:spring-beans:6.2.6 (*)
+|    |    |    +--- org.springframework:spring-core:6.2.6 (*)
+|    |    |    \--- io.micrometer:micrometer-observation:1.14.5 -> 1.14.6 (*)
+|    |    +--- com.fasterxml.jackson.core:jackson-databind:2.18.3
+|    |    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.18.3
+|    |    |    |    \--- com.fasterxml.jackson:jackson-bom:2.18.3
+|    |    |    |         +--- com.fasterxml.jackson.core:jackson-annotations:2.18.3 (c)
+|    |    |    |         +--- com.fasterxml.jackson.core:jackson-core:2.18.3 (c)
+|    |    |    |         +--- com.fasterxml.jackson.core:jackson-databind:2.18.3 (c)
+|    |    |    |         +--- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.18.3 (c)
+|    |    |    |         +--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.18.3 (c)
+|    |    |    |         \--- com.fasterxml.jackson.module:jackson-module-parameter-names:2.18.3 (c)
+|    |    |    +--- com.fasterxml.jackson.core:jackson-core:2.18.3
+|    |    |    |    \--- com.fasterxml.jackson:jackson-bom:2.18.3 (*)
+|    |    |    \--- com.fasterxml.jackson:jackson-bom:2.18.3 (*)
+|    |    +--- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.18.3
+|    |    |    +--- com.fasterxml.jackson.core:jackson-core:2.18.3 (*)
+|    |    |    +--- com.fasterxml.jackson.core:jackson-databind:2.18.3 (*)
+|    |    |    \--- com.fasterxml.jackson:jackson-bom:2.18.3 (*)
+|    |    +--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.18.3
+|    |    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.18.3 (*)
+|    |    |    +--- com.fasterxml.jackson.core:jackson-core:2.18.3 (*)
+|    |    |    +--- com.fasterxml.jackson.core:jackson-databind:2.18.3 (*)
+|    |    |    \--- com.fasterxml.jackson:jackson-bom:2.18.3 (*)
+|    |    \--- com.fasterxml.jackson.module:jackson-module-parameter-names:2.18.3
+|    |         +--- com.fasterxml.jackson.core:jackson-core:2.18.3 (*)
+|    |         +--- com.fasterxml.jackson.core:jackson-databind:2.18.3 (*)
+|    |         \--- com.fasterxml.jackson:jackson-bom:2.18.3 (*)
+|    +--- org.springframework:spring-web:6.2.6 (*)
+|    \--- org.springframework:spring-webmvc:6.2.6
+|         +--- org.springframework:spring-aop:6.2.6 (*)
+|         +--- org.springframework:spring-beans:6.2.6 (*)
+|         +--- org.springframework:spring-context:6.2.6 (*)
+|         +--- org.springframework:spring-core:6.2.6 (*)
+|         +--- org.springframework:spring-expression:6.2.6 (*)
+|         \--- org.springframework:spring-web:6.2.6 (*)
++--- org.springframework.boot:spring-boot-starter-undertow -> 3.4.5
+|    +--- io.undertow:undertow-core:2.3.18.Final
+|    |    +--- org.jboss.logging:jboss-logging:3.4.3.Final -> 3.6.1.Final
+|    |    +--- org.jboss.xnio:xnio-api:3.8.16.Final
+|    |    |    +--- org.wildfly.common:wildfly-common:1.5.4.Final
+|    |    |    +--- org.wildfly.client:wildfly-client-config:1.0.1.Final
+|    |    |    |    \--- org.jboss.logging:jboss-logging:3.3.1.Final -> 3.6.1.Final
+|    |    |    \--- org.jboss.threads:jboss-threads:2.3.6.Final -> 3.5.0.Final
+|    |    |         +--- org.jboss.logging:jboss-logging:3.4.1.Final -> 3.6.1.Final
+|    |    |         \--- org.wildfly.common:wildfly-common:1.5.0.Final -> 1.5.4.Final
+|    |    +--- org.jboss.xnio:xnio-nio:3.8.16.Final
+|    |    |    \--- org.jboss.xnio:xnio-api:3.8.16.Final (*)
+|    |    \--- org.jboss.threads:jboss-threads:3.5.0.Final (*)
+|    +--- io.undertow:undertow-servlet:2.3.18.Final
+|    |    +--- io.undertow:undertow-core:2.3.18.Final (*)
+|    |    +--- jakarta.servlet:jakarta.servlet-api:6.0.0
+|    |    \--- jakarta.annotation:jakarta.annotation-api:2.1.1
+|    \--- io.undertow:undertow-websockets-jsr:2.3.18.Final
+|         +--- io.undertow:undertow-core:2.3.18.Final (*)
+|         +--- io.undertow:undertow-servlet:2.3.18.Final (*)
+|         +--- jakarta.websocket:jakarta.websocket-api:2.1.0 -> 2.1.1
+|         \--- jakarta.websocket:jakarta.websocket-client-api:2.1.0 -> 2.1.1
++--- org.jboss.slf4j:slf4j-jboss-logmanager:1.1.0.Final
++--- com.fasterxml.jackson.core:jackson-databind -> 2.18.3 (*)
++--- org.springframework.boot:spring-boot-starter-cache -> 3.4.5
+|    +--- org.springframework.boot:spring-boot-starter:3.4.5 (*)
+|    \--- org.springframework:spring-context-support:6.2.6
+|         +--- org.springframework:spring-beans:6.2.6 (*)
+|         +--- org.springframework:spring-context:6.2.6 (*)
+|         \--- org.springframework:spring-core:6.2.6 (*)
+\--- com.github.ben-manes.caffeine:caffeine:3.1.8
+     +--- org.checkerframework:checker-qual:3.37.0
+     \--- com.google.errorprone:error_prone_annotations:2.21.1
+
+(c) - A dependency constraint, not a dependency. The dependency affected by the constraint occurs elsewhere in the tree.
+(*) - Indicates repeated occurrences of a transitive dependency subtree. Gradle expands transitive dependency subtrees only once per project; repeat occurrences only display the root of the subtree, followed by this annotation.
+
+A web-based, searchable dependency report is available by adding the --scan option.
+
+BUILD SUCCESSFUL in 2s
+1 actionable task: 1 executed

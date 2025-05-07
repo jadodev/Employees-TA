@@ -1,10 +1,9 @@
 package com.Jonathan.Prueba.Tecnica.infrastructure.controller;
 
-import com.jonathan.Prueba.Amaris.application.dto.EmployeeDto;
-import com.jonathan.Prueba.Amaris.application.dto.EmployeeResponseDto;
-import com.jonathan.Prueba.Amaris.application.service.EmployeeApplicationService;
+import com.Jonathan.Prueba.Tecnica.application.dto.EmployeeDto;
+import com.Jonathan.Prueba.Tecnica.application.dto.EmployeeResponseDto;
+import com.Jonathan.Prueba.Tecnica.application.service.EmployeeApplicationService;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -19,27 +18,24 @@ import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-@WebMvcTest(EmployeeController.class) // Sólo carga el controlador y el contexto necesario
+@WebMvcTest(EmployeeController.class)
 class EmployeeControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
 
     @MockBean
-    private EmployeeApplicationService employeeService; // Mock del servicio requerido
+    private EmployeeApplicationService employeeService;
 
     @Test
     void testGetAllEmployees() throws Exception {
-        // Datos simulados
         List<EmployeeDto> mockEmployees = Arrays.asList(
                 new EmployeeDto(1, "John Doe", 50000, 30, "profile1.jpg"),
                 new EmployeeDto(2, "Jane Smith", 60000, 40, "profile2.jpg")
         );
 
-        // Configuración del mock
         when(employeeService.getAlEmployees()).thenReturn(mockEmployees);
 
-        // Ejecuta y valida la respuesta del endpoint
         mockMvc.perform(get("/employees")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
@@ -62,13 +58,10 @@ class EmployeeControllerTest {
 
     @Test
     void testGetEmployeeById() throws Exception {
-        // Datos simulados
         EmployeeResponseDto mockEmployee = new EmployeeResponseDto(1, "John Doe", 50000, 30, "profile1.jpg", 600000);
 
-        // Configuración del mock
         when(employeeService.getEmployeeById(1L)).thenReturn(Optional.of(mockEmployee));
 
-        // Ejecuta y valida la respuesta del endpoint
         mockMvc.perform(get("/employees/1")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())

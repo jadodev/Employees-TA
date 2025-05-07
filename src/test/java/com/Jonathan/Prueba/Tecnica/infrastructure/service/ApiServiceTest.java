@@ -1,6 +1,6 @@
 package com.Jonathan.Prueba.Tecnica.infrastructure.service;
 
-import com.jonathan.Prueba.Amaris.domain.entity.Employee;
+import com.Jonathan.Prueba.Tecnica.domain.entity.Employee;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

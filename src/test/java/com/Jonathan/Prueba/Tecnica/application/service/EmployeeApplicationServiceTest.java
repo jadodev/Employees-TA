@@ -32,19 +32,15 @@ public class EmployeeApplicationServiceTest {
 
     @Test
     void testGetAllEmployees() {
-        // Datos simulados
         List<Employee> mockEmployees = Arrays.asList(
                 new Employee(1, "John Doe", 50000, 30, "profile1.jpg"),
                 new Employee(2, "Jane Smith", 60000, 40, "profile2.jpg")
         );
 
-        // Configuración del mock
         when(employeeDomainService.getAllEmployees()).thenReturn(mockEmployees);
 
-        // Ejecución del método
         List<EmployeeDto> employeeDtos = employeeApplicationService.getAlEmployees();
 
-        // Validaciones
         assertNotNull(employeeDtos);
         assertEquals(2, employeeDtos.size());
 
@@ -55,38 +51,29 @@ public class EmployeeApplicationServiceTest {
         assertEquals(30, firstEmployeeDto.getEmployee_age());
         assertEquals("profile1.jpg", firstEmployeeDto.getProfie_image());
 
-        // Verificar que el servicio de dominio fue llamado una vez
         verify(employeeDomainService, times(1)).getAllEmployees();
     }
 
     @Test
     void testGetAllEmployeesEmptyList() {
-        // Configuración del mock para devolver una lista vacía
         when(employeeDomainService.getAllEmployees()).thenReturn(Arrays.asList());
 
-        // Ejecución del método
         List<EmployeeDto> employeeDtos = employeeApplicationService.getAlEmployees();
 
-        // Validaciones
         assertNotNull(employeeDtos);
         assertTrue(employeeDtos.isEmpty());
 
-        // Verificar que el servicio de dominio fue llamado
         verify(employeeDomainService, times(1)).getAllEmployees();
     }
 
     @Test
     void testGetEmployeeById() {
-        // Datos simulados
         Employee mockEmployee = new Employee(1, "John Doe", 50000, 30, "profile1.jpg");
 
-        // Configuración del mock
         when(employeeDomainService.getEmployeeById(1L)).thenReturn(Optional.of(mockEmployee));
 
-        // Ejecución del método
         Optional<EmployeeResponseDto> employeeResponseDto = employeeApplicationService.getEmployeeById(1L);
 
-        // Validaciones
         assertTrue(employeeResponseDto.isPresent());
         EmployeeResponseDto dto = employeeResponseDto.get();
 
@@ -97,22 +84,17 @@ public class EmployeeApplicationServiceTest {
         assertEquals("profile1.jpg", dto.getProfie_image());
         assertEquals(50000 * 12, dto.getEmployee_anual_salary());
 
-        // Verificar que el servicio de dominio fue llamado
         verify(employeeDomainService, times(1)).getEmployeeById(1L);
     }
 
     @Test
     void testGetEmployeeByIdNotFound() {
-        // Configuración del mock para devolver un Optional vacío
         when(employeeDomainService.getEmployeeById(1L)).thenReturn(Optional.empty());
 
-        // Ejecución del método
         Optional<EmployeeResponseDto> employeeResponseDto = employeeApplicationService.getEmployeeById(1L);
 
-        // Validaciones
         assertFalse(employeeResponseDto.isPresent());
 
-        // Verificar que el servicio de dominio fue llamado
         verify(employeeDomainService, times(1)).getEmployeeById(1L);
     }
 

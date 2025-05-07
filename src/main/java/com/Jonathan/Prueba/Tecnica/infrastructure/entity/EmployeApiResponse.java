@@ -5,7 +5,7 @@ import java.util.List;
 public class EmployeApiResponse {
     private List<EmployeeExternalDto> data;
 
-    public EmployeApiResponse(List<EmployeeExternalDto> externalEmployees) {
+    public EmployeApiResponse() {
     }
 
     public List<EmployeeExternalDto> getData() {

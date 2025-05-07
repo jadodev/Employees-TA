@@ -2,7 +2,7 @@
 
 ## Arquitectura 
 
-### -Este Proyecto fue diseñado con una arquitectura hexagonal que permite su escalabilidad y mantenibilidad de codigo sencilla, además de gran desacomplamiento de las capas de dominio, aplicacion e infrasestructura.
+#### -Este Proyecto fue diseñado con una arquitectura hexagonal que permite su escalabilidad y mantenibilidad de codigo sencilla, además de gran desacomplamiento de las capas de dominio, aplicacion e infrasestructura.
 
 ```bash
   └── src/
@@ -77,8 +77,8 @@
 
 ## Patrones de Diseño
 
-# Implementación de patrones de diseño como DTO, Mapper, Inyeccion de Dependencias.
+#### Implementación de patrones de diseño como DTO, Mapper, Inyeccion de Dependencias.
 
-# Tecnologias implementadas
+## Tecnologias implementadas
 
-### Implementacion de Spring Boot, Caffein para el cache en memoria, Creacion de Beans para configuraciones, Jnit y Mockito para testing 
+#### Implementacion de Spring Boot, Caffein para el cache en memoria, Creacion de Beans para configuraciones, Jnit y Mockito para testing 
